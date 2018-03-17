@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.6/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.6/addons/p5.dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.6/addons/p5.sound.js"></script>
+
+</head>
+<body>
+<h3>Script: p5-0.html</h3>
+<script>
+
+var capture;
+
+function setup() {
+  createCanvas(390, 240);
+  capture = createCapture(VIDEO);
+  capture.size(320, 240);
+  //capture.hide();
+}
+
+function draw() {
+  background(255);
+  image(capture, 0, 0, 320, 240);
+  filter('INVERT');
+}
+</script>
+</body>
+</html>
